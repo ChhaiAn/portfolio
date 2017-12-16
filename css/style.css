@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Ubuntu+Mono');
 
 
-
 * {
   padding: 0;
   margin: 0;
@@ -41,7 +40,7 @@ html, body{
 }
 .my-nav-list a:hover {
   /* color:  white !important;
-  
+
   text-shadow: 1px 1px 1px black,
                 1px 1px 1px black; */
   background: none;
@@ -170,14 +169,20 @@ from { opacity: 1.0 } to { opacity: 0.0 }
 #professional-title{
   padding: 1em;
 }
+.my-hide {
+  display:none;
+}
+.show {
+  display: block;
+}
 .treehouse{
   display: flex;
   flex-wrap: nowrap;
 
-  
+
 }
 .row-1{
-  
+
 }
 .row-2{
  position: relative;
@@ -205,8 +210,8 @@ from { opacity: 1.0 } to { opacity: 0.0 }
 .badges{
   width: 100%;
   height: 100%;
-  
-  
+
+
 }
 .progress-bar{
   height: 10px !important;
@@ -746,16 +751,16 @@ from { opacity: 1.0 } to { opacity: 0.0 }
 
 @keyframes fadeIn {
   0%{
-  
+
     opacity: 0;
-    
-    
+
+
   }
   50%{
     transform: scale(2);
   }
   100%{
-   
+
     transform: scale(1);
     opacity: 1;
 
@@ -786,6 +791,8 @@ from { opacity: 1.0 } to { opacity: 0.0 }
 }
 #portfolio-title{
   color:#BB7AA1;
+
+
   padding: 1em;
 }
 
@@ -870,9 +877,11 @@ from { opacity: 1.0 } to { opacity: 0.0 }
 .card:hover {
   transform: translatey(-25px);
   transform-style: preserve-3d;
-  box-shadow: 5px 5px 8px black,
-              0px 0px 10px rgba(0, 0, 0, 0.596);
-
+  /* box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3),
+              0px 0px 10px rgba(0, 0, 0, 0.296),
+              0px 5px 80px rgba(0, 0, 0, 0.196),
+              0px 10px 80px rgba(0, 0, 0, 0.01); */
+              box-shadow: 22px 30px 93px -4px rgba(51,45,51,0.59);
 }
 .front {
   display:flex;
@@ -931,7 +940,7 @@ from { opacity: 1.0 } to { opacity: 0.0 }
   width: 30px;
   height: 30px;
   background-color: #56A64B;
-  animation: moveright 1s ease 1;
+  animation: moveright .5s ease 1;
 }
 .circle-second {
   will-change: position;
@@ -941,7 +950,7 @@ from { opacity: 1.0 } to { opacity: 0.0 }
   width: 30px;
   height: 30px;
   background-color: #56A64B;
-  animation: secondDes 1s ease;
+  animation: secondDes .5s ease;
 }
 .circle-third {
   will-change: position;
@@ -951,7 +960,7 @@ from { opacity: 1.0 } to { opacity: 0.0 }
   width: 30px;
   height: 30px;
   background-color: #56A64B;
-  animation: thirdDes 1s ease;
+  animation: thirdDes .5s ease;
 }
 
 .line {
@@ -974,7 +983,11 @@ from { opacity: 1.0 } to { opacity: 0.0 }
   background-color: rgba(147,147,147,.3);
   text-align: center;
   padding: 5px;
+  height: auto;
   visibility: hidden;
+}
+.text-box h4{
+  color: #58A54F;
 }
 .text-box p{
   font-size: .8em !important;
@@ -1043,3 +1056,69 @@ from { opacity: 1.0 } to { opacity: 0.0 }
     transform: scale(2);
   }
 }
+
+
+
+
+/* ABOUT ME */
+
+
+/* CONTACT ME */
+.contact-parallax{
+  background-image: url("../images/contactme.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+}
+.contact-box h5{
+  color: #2FA599;
+}
+.about-text {
+  text-align: justify;
+}
+.my-pic {
+  width: 100%;
+
+}
+.contact-box {
+  margin-top: 14px;
+  background-color: rgba(147,147,147,.3);
+  padding: 15px;
+}
+
+
+
+/* MEDIA QUERY */
+@media screen and (min-width: 662px) {
+  .about{
+    height: 100vh;
+  }
+  .contact-parallax {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  .professional {
+    height: 50vh;
+  }
+
+}
+@media screen and (max-width: 480px) {
+    .home-section {
+      font-size: 14px !important;
+    }
+    .professional {
+      height: 50vh;
+    }
+    .journey {
+      height: auto ;
+    }
+    .contact-parallax{
+      height: auto ;
+    }
+    .typing-text {
+      line-height: normal !important;
+    }
+
+  }

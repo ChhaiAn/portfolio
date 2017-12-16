@@ -19,7 +19,7 @@
 
     </head>
 
-    <body>
+    <body id="home">
 <!-- NAVIGATION -->
 
 <nav class="my-nav-wrapper z-depth-2">
@@ -29,20 +29,38 @@
         <img class="my-nav-logo" src="images/icon/mylogo1.svg" alt="">
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down my-nav-list">
-        <li><a href="sass.html">HOME</a></li>
-        <li><a href="badges.html">PROFESSIONAL</a></li>
-        <li><a href="collapsible.html">EXPERIENCE</a></li>
-        <li><a href="collapsible.html">PORTFOLIO</a></li>
-        <li><a href="collapsible.html">CONTACT</a></li>
+        <li><a class="scroll-link" href="#home">HOME</a></li>
+        <li><a class="scroll-link" href="#professional">PROFESSIONAL</a></li>
+        <li><a class="scroll-link" href="#portfolio">PORTFOLIO</a></li>
+        <li><a class="scroll-link" href="#journey">JOURNEY</a></li>
+        <li><a class="scroll-link" href="#about">ABOUT ME</a></li>
+        <li><a class="scroll-link" href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<h1>Hello</h1>
+<!--SIDE NAV-->
+<div class="fixed-action-btn my-hide" id="float-nav">
+  <a class="btn-floating btn-large red pulse">
+    <i class="large material-icons">explore</i>
+  </a>
+  <ul>
+    <li><a class="scroll-link btn-floating red" href="#home"><i class="material-icons">home</i></a></li>
+    <li><a class="scroll-link btn-floating yellow darken-1" href="#professional"><i class="material-icons">work</i></a></li>
+    <li><a class="scroll-link btn-floating orange darken-3" href="#portfolio"><i class="material-icons">brush</i></a></li>
+    <li><a class="scroll-link btn-floating green" href="#journey"><i class="material-icons">timeline</i></a></li>
+    <li><a class="scroll-link btn-floating blue" href="#about"><i class="material-icons">child_care</i></a></li>
+    <li><a class="scroll-link btn-floating pink lighten-1" href="#contact"><i class="material-icons">phonelink</i></a></li>
+  </ul>
+</div>
+
+
+
+
 <!--HOME SECTION-->
 
-<div class="container home-section ">
+<div class="container home-section " >
   <h1 class="center">HI!, I'M <span
   class="big-c">C</span>HHAI.</h1>
   <h5 class="center">I AM A JUNIOR WEB DEVLOPER.</h5>
@@ -50,14 +68,14 @@
     <h5 class="center">I CODE IN <span class="typing-text" id="typing-text"></span><span class="blinking"></span></h5>
 
   <div class="center" style="margin-top: 10vh">
-    <i class="material-icons large float" >expand_more</i>
+    <a class="scroll-link" href="#professional" style="color: white"><i class="material-icons large float" >expand_more</i></a>
   </div>
 
 </div>
 <!--                  *****                     -->
 
 <!--PROFESSIONAL SECTION-->
-  <div class="professional">
+  <div class="professional" id="professional">
     <div class="overlay">
       <div class="container">
          <h2 class="center" id="professional-title">PROFESSIONAL</h2>
@@ -97,8 +115,9 @@
          </div>
        </div>
      </div>
-
+  <div class="my-hide hide-on-med-and-down" id="badges-box">
      <h3 class="center">TREEHOUSE BADGES</h3>
+
      <div class="treehouse" id="treehouse">
        <div class="badges-wrapper badges-1">
          <img class="badges" src="images/badges/1.png" alt="">
@@ -136,8 +155,7 @@
       <div class="badges-wrapper badges-13">
         <img class="badges" src="images/badges/13.png" alt="">
       </div>
-
-
+    </div>
 
 
      <div class="treehouse row-2">
@@ -222,7 +240,7 @@
 
     </div><!--ROW 3-->
 
-    <div class="treehouse row-4 show">
+    <div class="treehouse row-4">
       <div class="badges-wrapper badges-38">
         <img class="badges" src="images/badges/38.png" alt="">
       </div>
@@ -264,12 +282,12 @@
     </div><!--ROW 4-->
 
 
-
+      </div>
     </div><!--CONTAINER-->
    </div>
 
    <!-- PORTFOLIO SECTION -->
-       <div class="portfolio-parallax ">
+       <div class="portfolio-parallax" id="portfolio">
             <h2 class="center" id="portfolio-title">PORTFOLIO</h2>
 
             <div class="container">
@@ -279,7 +297,7 @@
                     <img class="thumb"
                     src="images/tributeThumb.png">
                     <span class="thumb-title">Tribute Page</span>
-                    <p>This is my tribute project decicaded to President Lincoln and his sacrificed for the course of humanity. </p>
+                    <p>This is my tribute project decicaded to President Lincoln and his accomplishments.</p>
                     <a href="#" class="customize_button pulse wave-effect">View</a>
                   </div>
 
@@ -328,31 +346,31 @@
 <!-- JOURNEY SECTION -->
 
 
-<div class="journey">
+<div class="journey" id="journey">
   <div class="overlay-1">
     <div class="container">
        <h2 class="center-align title" id="journey-title">JOURNEY</h2>
        <div class="row">
-         <div class="col s12 l4">
+         <div class="col s12 m12 l4">
            <div class="text-box" id="fall-1">
              <h4>FALL 2016</h4>
              <p>I started my web dev journey in Fall 2016. I took some programming before and I used to think that web dev is not part of programming but my view was changed on web dev after I finished my HTML and CSS class.</p>
            </div>
          </div>
-         <div class="col s12 l4">
+         <div class="col s12 m12 l4">
            <div class="text-box" id="spring">
              <h4>SPRING 2017</h4>
              <p>I did not take any web development classes in this semester however I took database and programming logic class. It was challenging to learn database concept.I also created some side projects for HTML and CSS.</p>
            </div>
          </div>
-         <div class="col s12 l4" >
+         <div class="col s12 m12 l4" >
            <div class="text-box" id="fall-2">
              <h4>FALL 2017</h4>
              <p>This is the most exciting semester so far. I learn how to make a responsive website by uing CSS framework. I also learn the basic use of PHP and it was so exciting to combine HTML, CSS and PHP together. I can't wait to learn more!</p>
            </div>
          </div>
        </div>
-       <div class="flex-container-journey">
+       <div class="flex-container-journey hide-on-med-and-down">
          <div class="line"></div>
           <div class="" id="circle"></div>
           <div class="" id="second-circle"></div>
@@ -364,30 +382,65 @@
 </div>
 
 
+<!--ABOUT ME-->
 
+<div class="container" id="about">
+  <h1 class="center">ABOUT ME</h1>
+  <br>
+  <br>
+  <div class="row center">
+    <div class="col s12 m4">
+        <img class="my-pic" src="images/me.jpg" alt="">
+    </div>
+    <div class="col s12 m8">
+      <p class="about-text">Hi, again! Thank you for visiting my site. Let me tell you a little bit about myself. I was born and raised in Cambodia. I came to the US in 2011 and had been in school since. I miss my family and my dogs :(. I had been soul searching for the first 5 years of school until I stumpled upon HTML, CSS and JavaScript. I immidiately love the idea of seeing myself as a web dev. I enjoy the freedom and creativity that web development provides. </p>
+      <br>
+      <p class="about-text">Throughout the years, I've worked for places that put me through some bad experiences. I've also had some great ones that allowed me to work with some amazing people who have played key roles in my career. I have worked very hard so that I can get to where I want to be. I honestly love being a web dev and I will do whatever it takes to further my career. Let's create something amazing! </p>
+    </div>
+  </div>
+</div>
 
+<!--CONTACT-->
+<div class="contact-parallax" id="contact">
+  <div class="overlay-1">
+    <div class="container">
+      <h1 class="center">CONTACT</h1>
+      <div class="row contact-box">
+        <div class="col s12 m5">
+          <h5>LET'S DO THIS!</h5>
+          <p>Please feel free to reach out to me if you have any questions or comment about my work. Also, you could always just send me a hello :)</p>
+          <br>
+          <h5>CONTACT INFORMATION</h5>
+          <p>Email: chhaily_an@yahoo.com</p>
+        </div>
+        <div class="col s11 m5 offset-m1">
+              <br>
+              <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Full Name</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="icon_email" type="tel" class="validate">
+            <label for="icon_email">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="message" class="materialize-textarea"></textarea>
+            <label for="message">Message</label>
+          </div>
+        </div>
+        <div class="center">
+          <a  href = "" class="waves-effect waves-light btn"><i class="material-icons right">send</i>SEND</a>
+              <!-- <button class="btn waves-effect waves-light" type="submit" name="action">SEND
+                <i class="material-icons right">send</i>
+              </button> -->
+        </div>
+      </div>
 
-
-
-
-
-
-
-<!--
-<div class="parallax-container" id="parallax">
-   <div class="parallax"><img src="images/professional.jpg"></div>
- </div> -->
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+  </div>
+</div>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->

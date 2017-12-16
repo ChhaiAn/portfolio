@@ -1,7 +1,34 @@
 
 $(document).ready(function(){
-  $('.parallax').parallax();
- 
+
+
+  // $('.fixed-action-btn').floatingActionButton({
+  //   direction: 'top', // Direction menu comes out
+  //   hoverEnabled: true, // Hover enabled
+  //   toolbarEnabled: false // Toolbar transition enabled
+  // });
+
+
+
+
+
+
+/* SCROLLING EFFECT */
+
+$('.scroll-link').click(function(e){
+  if (this.hash !== ""){
+    e.preventDefault();
+  }
+  var hash = this.hash;
+
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 1000, function(){
+  });
+});
+
+
+
 
 
 
@@ -9,7 +36,7 @@ $(document).ready(function(){
 
 var typingText = document.getElementById("typing-text");
 var i = 0;
-var txt = 'HTML CSS JavaScript & PHP....:)'; 
+var txt = 'HTML CSS JavaScript & PHP....:)';
 var speed = 80; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
@@ -31,6 +58,9 @@ var firstCircle = document.getElementById('circle');
 var fall1 = document.getElementById('fall-1');
 var spring = document.getElementById('spring');
 var fall2 = document.getElementById('fall-2');
+
+var badgesBox = document.getElementById('badges-box');
+var floatNav = document.getElementById('float-nav');
 //var arrg = text.split("");
 // var result = '';
 
@@ -73,6 +103,16 @@ window.addEventListener('scroll', function (){
     document.getElementById('css-progress').classList.add("anim-css");
     document.getElementById('js-progress').classList.add("anim-js");
     document.getElementById('php-progress').classList.add("anim-php");
+    floatNav.classList.add("show");
+    setTimeout(function(){
+      badgesBox.classList.add("show");
+    },2000);
+
+
+
+  }
+  else if(ypos < 600){
+    floatNav.classList.remove("show");
   }
   if (ypos > 2300){
 
@@ -83,28 +123,27 @@ window.addEventListener('scroll', function (){
     setTimeout(function(){
         fall1.classList.add("fall-1");
         fall1.style.visibility = "visible";
-    },2500);
+    },1900);
 
     setTimeout(function(){
         secondCircle.classList.add("circle-second");
 
-    },3500);
+    },2100);
     setTimeout(function(){
         spring.classList.add("spring");
         spring.style.visibility = "visible";
-    },5000);
+    },2600);
     setTimeout(function(){
         thirdCircle.classList.add("circle-third");
 
-    },6000);
+    },2800);
     setTimeout(function(){
         fall2.classList.add("fall-2");
         fall2.style.visibility = "visible";
-    },7000);
+    },3000);
   }
 
 
 });
-  
-});
 
+});
